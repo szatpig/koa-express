@@ -34,7 +34,7 @@ app.use(async (ctx, next) => {
         await next()
     } catch (err) {
         ctx.status = err.status || 500;
-        throw new Error(err);
+        throw new Error(err); 
         // logger.error(`${err.status} -- ${err.message}\n${err.stack}`)
     }
 });
