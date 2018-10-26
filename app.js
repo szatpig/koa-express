@@ -5,7 +5,8 @@ const jwt = require('koa-jwt');
 const json = require('koa-json')
 const onError = require('koa-onerror')
 const bodyParser = require('koa-bodyparser')
-const logger = require('koa-logger')
+const logger = require('koa-logger');
+require('./config/db');
 
 
 const route = require('./routes');

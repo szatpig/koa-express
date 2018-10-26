@@ -1,5 +1,8 @@
 // Created by szatpig at 2018/9/17.
 
+const User = require('../models/UserModel');
+
+
 const regist = async (ctx) => {
 
 };
