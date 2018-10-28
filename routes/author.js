@@ -8,6 +8,7 @@ const router =  new Router({
 });
 
 router.post('/login',author.login);
+router.post('/regist',author.regist);
 router.get('/sms',author.sms);
 
 module.exports = router;
