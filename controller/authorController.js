@@ -90,12 +90,8 @@ const login = async (ctx) => {
         }
 
     }catch(e){
-        console.log(e)
-        ctx.response.status = 500;
-        ctx.body = {
-            code:-5000,
-            message:'系统错误'
-        }
+        console.log(e);
+        ctx.throw(500,'系统错误');
     }
 };
 

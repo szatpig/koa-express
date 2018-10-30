@@ -26,6 +26,7 @@ app.use(async (ctx, next) => {
     console.log(`${ctx.method} ${ctx.url} - ${ms}ms`)
 })
 
+
 app.use(async (ctx, next) => {
     try {
         await next()
@@ -38,8 +39,14 @@ app.use(async (ctx, next) => {
     }
 });
 
+
 app.use(InterfaceBuffer('^/api'));
 
+app.use(koaJwt({
+    secret:config.secret
+}).unless({
+    path: [/\/regist/, /\/login/],
+}));
 
 // middlewares
 app.use(bodyParser({
@@ -47,11 +54,7 @@ app.use(bodyParser({
 }));
 
 
-app.use(koaJwt({
-    secret:config.secret
-}).unless({
-    path: [/\/regist/, /\/login/],
-}));
+
 
 app.use(json())
 app.use(logger())
