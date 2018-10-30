@@ -7,7 +7,9 @@ const router = new Router({
 });
 
 const author = require('./author');
+const express = require('./express');
 
 router.use(author.routes(),author.allowedMethods());
+router.use(express.routes(),express.allowedMethods());
 
 module.exports = router;

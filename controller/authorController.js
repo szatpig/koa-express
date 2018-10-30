@@ -67,7 +67,6 @@ const login = async (ctx) => {
             };
             return false;
         }
-        // console.log(userList,password,userList.password,bcrypt.compare(password,userList.password));
 
         if(!await bcrypt.compare(password,userList.password)){
             ctx.body = {

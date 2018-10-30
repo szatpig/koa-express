@@ -45,7 +45,7 @@ app.use(InterfaceBuffer('^/api'));
 app.use(koaJwt({
     secret:config.secret
 }).unless({
-    path: [/\/regist/, /\/login/],
+    path: [/\/regist/, /\/login/,/\/express\/search/],
 }));
 
 // middlewares
