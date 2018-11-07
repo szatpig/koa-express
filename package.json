@@ -27,7 +27,9 @@
     "md5": "^2.2.1",
     "mongoose": "^5.2.14",
     "mongoose-auto-increment-fix": "^5.0.2",
-    "pug": "^2.0.0-rc.1"
+    "pug": "^2.0.0-rc.1",
+    "request": "^2.88.0",
+    "request-promise": "^4.2.2"
   },
   "devDependencies": {
     "nodemon": "^1.8.1"
