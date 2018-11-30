@@ -12,7 +12,7 @@ const search = async (ctx) => {
                 appKey:'823aad46c6b34d25b020dc9a49352d3d',
                 expressNo:expressNum
             }
-        });
+        }) ;
 
         // let url = 'http://q.kdpt.net/api?id=XDB2g2sjbns211ow969aNo0I_1304485196&com=auto&nu='+expressNum;
         // let _data = await request.get(url);

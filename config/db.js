@@ -6,7 +6,10 @@ const config = require('./');
 mongoose.Promise = global.Promise;
 
 // 连接MongoDB数据库
-mongoose.connect(config.db,{ useNewUrlParser:true});
+mongoose.connect(config.db,{
+    useCreateIndex:true,
+    useNewUrlParser: true
+});
 
 mongoose.connection.on('connected', () => {
     console.info('MongoDB connected success.')

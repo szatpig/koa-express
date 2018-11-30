@@ -26,7 +26,7 @@ const regist = async (ctx) => {
     //获取hash值
     let hash = bcrypt.hashSync(password, salt);
 
-    const newUser = await User.create({
+    const newUser = await User.create({  //相当于 new User({ ... })
         mobile,
         password:hash,
         userName

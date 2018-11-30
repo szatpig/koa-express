@@ -2,13 +2,13 @@
 const mongoose = require('mongoose');
 // const autoIncrement = require('mongoose-auto-increment-fix');
 
-const userSchema = mongoose.Schema({
+const userSchema = new mongoose.Schema({
     uid:{
-        type:Number,
+        type: Number
     },
     mobile:{
         type:Number,
-        required:true
+        required:[true,'手机号不能为空']
     },
     password:{
         type:String,
@@ -16,7 +16,8 @@ const userSchema = mongoose.Schema({
     },
     userName:{
         type:String,
-        required:true
+        required:true,
+        lowercase: true
     },
     openId:String,
     avatar:String,
@@ -27,5 +28,7 @@ const userSchema = mongoose.Schema({
 }, {
     collection: 'User'
 });
+
+// userSchema.index({ uid:1 }); //添加索引
 
 module.exports = mongoose.model('User',userSchema);
